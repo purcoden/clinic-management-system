@@ -20,6 +20,16 @@ return new class extends Migration
             $table->date('dob')->nullable();
             $table->integer('gender')->nullable();
             $table->boolean('status')->default(1);
+			$table->string('no_izin');
+			$table->string('no_wa');
+			$table->string('link_map');
+			$table->string('city');
+			$table->string('address');
+			$table->string('schedule');
+			$table->string('apoteker_name');
+			$table->string('schedule_apoteker');
+			$table->string('no_izin_apoteker');
+			$table->string('profile_image');
             $table->string('language')->default('en')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
