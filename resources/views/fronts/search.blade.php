@@ -73,31 +73,35 @@
                                  </div>
                              </div>
                              
-                             @foreach($search as $doctor)
-                             <div class="col-lg-6"> 
-                                 <div class="react-grid react-list">                            
-                                     <div class="single-studies grid-item">
-                                         <div class="inner-course">
-                                             <div class="case-img">
-                                                 <img src="{{ $doctor->user->profile_image }}" alt="doctor 1">
-                                             </div>
-                                             <div class="case-content descript-list">
-                                                 
-                                                 <h4 class="case-title"> <a href="doctor-detail.php">{{ $doctor->user->first_name }}</a></h4>
-                                             @foreach($doctor['specializations'] as $val)
-                                             {{ $val->name }}
-                                             @if( !$loop->last)
-                                             ,
-                                             @endif
-                                             
-                                             @endforeach
-                                                <br><a href="{{ route('detailDoctor', $doctor->id) }}">Lihat Detail</a>
-                                             </div>
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
-                             @endforeach
+                             @if(!empty($search))
+                                @foreach($search as $doctor)
+                                <div class="col-lg-6"> 
+                                    <div class="react-grid react-list">                            
+                                        <div class="single-studies grid-item">
+                                            <div class="inner-course">
+                                                <div class="case-img">
+                                                    <img src="{{ $doctor->user->profile_image }}" alt="doctor 1">
+                                                </div>
+                                                <div class="case-content descript-list">
+                                                    
+                                                    <h4 class="case-title"> <a href="doctor-detail.php">{{ $doctor->user->first_name }}</a></h4>
+                                                @foreach($doctor['specializations'] as $val)
+                                                {{ $val->name }}
+                                                @if( !$loop->last)
+                                                ,
+                                                @endif
+                                                
+                                                @endforeach
+                                                    <br><a href="{{ route('detailDoctor', $doctor->id) }}">Lihat Detail</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endforeach
+                            @else
+                               <p> Maaf, data tidak ditemukan...</p>
+                            @endif
                              
                          </div>
                          
