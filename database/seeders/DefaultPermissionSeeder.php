@@ -34,10 +34,6 @@ class DefaultPermissionSeeder extends Seeder
                 'display_name' => 'Manage Staff',
             ],
             [
-                'name' => 'manage_clinic',
-                'display_name' => 'Manage Clinic',
-            ],
-            [
                 'name' => 'manage_doctor_sessions',
                 'display_name' => 'Manage Doctor Sessions',
             ],

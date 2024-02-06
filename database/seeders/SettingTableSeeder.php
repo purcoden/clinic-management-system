@@ -17,7 +17,7 @@ class SettingTableSeeder extends Seeder
 
         Setting::create(['key' => 'clinic_name', 'value' => 'Clinic Appointment Management']);
         Setting::create(['key' => 'contact_no', 'value' => '1234567890']);
-        Setting::create(['key' => 'email', 'value' => 'infycare@email.com']);
+        Setting::create(['key' => 'email', 'value' => 'krisnawan455@email.com']);
         Setting::create(['key' => 'specialities', 'value' => '1']);
         Setting::create(['key' => 'currency', 'value' => '1']);
         Setting::create([
